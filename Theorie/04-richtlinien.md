@@ -1,3 +1,0 @@
-# Richtlinien
-
-> Platzhalter – Inhalt folgt.

@@ -6,12 +6,10 @@ Repository zum Workshop über die Entwicklung von Frontend- und Backend-Agenten 
 
 | Bereich | Inhalt |
 |---|---|
-| [`Theorie/`](Theorie/) | Grundlagen: AI Intro, AI Basics, Agent.md und Subagenten, Richtlinien |
 | [`Agent-Dev-Project/`](Agent-Dev-Project/) | Hier werden die Subagenten entwickelt: Specs, Agentendateien, Projekt-Config und Verifikationstools |
 | [`Agent-Test-Project/`](Agent-Test-Project/) | Testprojekt, an dem die Agenten ausprobiert werden |
 
 ```
-├── Theorie/
 ├── Agent-Dev-Project/
 │   ├── specs/            Was macht ein Agent, wie macht er es, wie wird validiert
 │   ├── .claude/agents/   Agentendateien: allgemeine Arbeitsweise, neutral zum Projekt
