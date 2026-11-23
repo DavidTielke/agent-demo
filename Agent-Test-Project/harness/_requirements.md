@@ -69,18 +69,6 @@ Jede Story trägt direkt nach dem H1-Titel einen Meta-Block mit genau einem Pfli
 - **Bei Spec + Code in einer Session** koordiniert geändert: direkt auf `Implemented` springen, ohne `Modified` als Zwischenstand zu schreiben.
 - **State ist Source of Truth über den Sync-Stand** — er muss bei jeder Spec-Bearbeitung explizit überprüft werden. Drift ist der Hauptfeind; lieber konservativ `Modified` setzen, wenn unklar.
 
-## Querschnitts-Features (verbindlich)
-
-Manche Features wiederholen sich über alle Epics, die fachlich denselben Mechanismus nutzen. Sie sind **kein optionales Extra**, sondern gehören für jedes betroffene Epic zum Mindest-Lieferumfang. Beim Anlegen eines neuen Epics ist diese Liste durchzugehen.
-
-### Email-Logs (jedes Epic mit ausgehenden E-Mails)
-
-Sobald ein Epic E-Mails an Kunden/Empfänger versendet (per n8n-Workflow über `POST /api/email-logs`), **muss** es eine eigene EmailLogs-Frontend-Feature im BackOffice haben — analog zu allen bestehenden Modulen (Referenz: `E6 Offers/F5 EmailLogs`).
-
-- Ein Feature `F{n} EmailLogs` mit mindestens zwei Stories: `S1 Email-Logs Übersicht` (rein lesendes, sortier-/filterbares Grid) und `S2 Email-Log Detail` (Read-only-Detail inkl. aufklappbarem Mail-Body und Quicklinks zu den verknüpften Entitäten).
-- Ein Menüeintrag „Email-Logs" in der zugehörigen Menügruppe (`_Menüstruktur.md`).
-- **Backend-seitiges Logging allein erfüllt diese Konvention nicht.** Endpoints (`/api/email-logs`) und schreibende Workflows existieren technisch oft schon, damit die Mails überhaupt protokolliert werden — die lesende BackOffice-UI ist trotzdem separat zu spezifizieren und umzusetzen. Genau diese Trennung hat in `E8 Appointments` dazu geführt, dass die Übersicht zunächst fehlte, obwohl Backend und Workflows längst da waren.
-
 ## Akzeptanzkriterien: INVEST
 
 Akzeptanzkriterien müssen die INVEST-Prinzipien erfüllen:
@@ -111,7 +99,7 @@ Akzeptanzkriterien müssen die INVEST-Prinzipien erfüllen:
 
 ### Abgrenzung UI / Backend
 
-Akzeptanzkriterien folgen der Architektur-Regel (siehe `_Architektur.md`): Fachlogik, Validierung und Uniqueness-Checks werden als Backend-Verhalten formuliert, das UI zeigt nur das Ergebnis an.
+Akzeptanzkriterien folgen der Architektur-Regel: Fachlogik, Validierung und Uniqueness-Checks werden als Backend-Verhalten formuliert, das UI zeigt nur das Ergebnis an.
 
 - ✅ „Das Backend prüft die Eindeutigkeit von `DisplayName`. Bei Konflikt zeigt das UI die Fehlermeldung des Backends an."
 - ❌ „Das Formular prüft, ob der `DisplayName` bereits existiert."
