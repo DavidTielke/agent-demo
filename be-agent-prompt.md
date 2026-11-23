@@ -1,0 +1,16 @@
+Bitte den Backend agenten erweitern:
+  - Backend aufteilen in
+  - /UI (Controller, etc)
+  - /Logic (Anwendungslogik, alle klassen nach Namenmsmustern)
+  - /Data (Alles zum Datenzugriff)
+  - /Models (Domainmodell)
+  - /CrossCutting (Alles querschneidende, Logging, Config, etc.)
+  - Namespace ist DavidTielke.Backend.[UI|Logic|Data|CrossCutting]...
+  - Alle Klassen sind durch interfaces entkoppelt
+  - Such dir ein professionelles regelset für resharper (jb.exe) und der code soll sich dran halten
+  - Namensmuster sind Suffixe für Klassen, d.h. Manager hat Klassen wie PersonManager, CarManager etc. Für jedes Namensmuster sind verschiedene Methoden zugelassen, z.b. Add, Remove, Update und Mehtoden die mit Get* Is* oder Are* anfangen (Am Anfang starten mit den Namensmuster Manager (Add, Remove, Update, Get*, Is*, Are*), Repository (Query, Insert, Update, Delete), Validator (IsValid, Validate, AssureValid), Controller (aus asp api)
+  - Der Musterkatalog ist die summe aller namensmuster mit erklärung
+  - Im Ordner Logic und Data streben wir musterkonsistenz an, d-h- alle management klassen entsprechen einem Namensmuster
+  - Wenn eine Funktionlität kein Namensmuster zugewiesen werden kann, weil es nicht im musterkatalog ist, soll es in das Notfallmuster Utils abgelegt werden und danach per ask tool um ein neues namensmusteer dafür gebenen werden
+  - alle Dinge die nicht mit resharper geprüft werden können, bitte mit roslyn analysern prüfen. d.h. Architektur, Design, etc.
+  - Eine Regel von mir: in if niemals direkt logische ausdrücke, immer mit sprechenden zwischenvariablen arbeiten so das dort nur sowas wie if(isDatabaseConnected)... steht
