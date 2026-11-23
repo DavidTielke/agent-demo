@@ -8,6 +8,7 @@ Diese Dateien IMMER lesen, bevor du im jeweiligen Bereich etwas machst:
 
 - `harness/_requirements.md` – IMMER lesen, wenn du Anforderungen, Specs, Epics, Features, Stories oder Akzeptanzkriterien anlegst oder bearbeitest.
 - `harness/_uiux.md` – IMMER lesen, wenn du irgendetwas mit der UI oder der UX machst. Das zugehörige Stylesheet ist `harness/dt-app.css`.
+- `harness/_ideas.md` – IMMER lesen, wenn der Stakeholder eine neue Idee einbringt (Ideen-Dialog) oder wenn du im Ordner `ideas/` etwas anlegst oder bearbeitest.
 
 ## Struktur
 
@@ -18,6 +19,8 @@ Diese Dateien IMMER lesen, bevor du im jeweiligen Bereich etwas machst:
 | `code/backend/` | Backend-Code |
 | `harness/_requirements.md` | Regeln für das Spec-Driven Development in diesem Projekt |
 | `harness/_uiux.md` | UI/UX-Richtlinie, dazu die Stylesheets `harness/dt-app.css` und `harness/colors_and_type.css` |
+| `harness/_ideas.md` | Regeln für den Ideen-Dialog, bevor Specs oder Code entstehen |
+| `ideas/` | Ideen-Dokumente nach `harness/_ideas.md`; der Ordner entsteht mit der ersten Idee |
 | `harness/<agent>/` | Projekt-Config der Agenten |
 | `.claude/agents/` | Agentendateien |
 
